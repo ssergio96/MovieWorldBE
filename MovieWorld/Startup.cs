@@ -69,7 +69,7 @@ namespace MovieWorld
                 app.UseHsts();
             }
             app.UseOpenApi();
-            // app.UseSwagger();
+          
             app.UseSwaggerUi3();
             app.UseHttpsRedirection();
 
