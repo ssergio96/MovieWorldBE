@@ -38,7 +38,7 @@ namespace MovieWorld
             services.AddSingleton<IConfiguration>(Configuration);
             services.AddControllersWithViews();
 
-            services.AddSwagger();
+           // services.AddSwagger();
 
             //Utilizzato per l'upload dei file, in particolare per evitare il MultipartBodyLengthLimit (dimensione file)
             services.Configure<FormOptions>(o => {
@@ -69,6 +69,7 @@ namespace MovieWorld
                 app.UseHsts();
             }
             app.UseOpenApi();
+            // app.UseSwagger();
             app.UseSwaggerUi3();
             app.UseHttpsRedirection();
 
@@ -78,7 +79,7 @@ namespace MovieWorld
            .AllowAnyMethod()
            .AllowAnyHeader());
 
-            app.UseDefaultFiles();
+          //  app.UseDefaultFiles();
            app.UseStaticFiles();
             //Definito per rendere utilizzabili le immagini nella cartella Resources/Images
             /*app.UseStaticFiles(new StaticFileOptions()
